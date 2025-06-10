@@ -1,0 +1,9 @@
+/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/bin/Release/net8.0/publish/auth.deps.json
+/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/bin/Release/net8.0/publish/auth.runtimeconfig.json
+/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/bin/Release/net8.0/publish/auth.pdb
+/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/bin/Release/net8.0/publish/ong-project.pdb
+/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/bin/Release/net8.0/publish/Amazon.Lambda.APIGatewayEvents.dll
+/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/bin/Release/net8.0/publish/Amazon.Lambda.Core.dll
+/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/bin/Release/net8.0/publish/Amazon.Lambda.Serialization.SystemTextJson.dll
+/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/bin/Release/net8.0/publish/ong-project.dll
+/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/bin/Release/net8.0/publish/auth.dll
