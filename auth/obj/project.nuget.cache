@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qbvXDKOfuQ8=",
+  "dgSpecHash": "QcV2C3GDHcU=",
   "success": true,
-  "projectFilePath": "/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/auth.csproj",
+  "projectFilePath": "/Users/nathielbarros/Documents/Personal/Mila/ong/auth/auth.csproj",
   "expectedPackageFiles": [
     "/Users/nathielbarros/.nuget/packages/amazon.lambda.apigatewayevents/2.7.1/amazon.lambda.apigatewayevents.2.7.1.nupkg.sha512",
     "/Users/nathielbarros/.nuget/packages/amazon.lambda.core/2.5.0/amazon.lambda.core.2.5.0.nupkg.sha512",

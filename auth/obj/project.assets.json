@@ -1585,11 +1585,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/auth.csproj",
+      "projectUniqueName": "/Users/nathielbarros/Documents/Personal/Mila/ong/auth/auth.csproj",
       "projectName": "auth",
-      "projectPath": "/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/auth.csproj",
+      "projectPath": "/Users/nathielbarros/Documents/Personal/Mila/ong/auth/auth.csproj",
       "packagesPath": "/Users/nathielbarros/.nuget/packages/",
-      "outputPath": "/Users/nathielbarros/Documents/Personal/Mila/ong-project/auth/obj/",
+      "outputPath": "/Users/nathielbarros/Documents/Personal/Mila/ong/auth/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nathielbarros/.nuget/NuGet/NuGet.Config"
@@ -1604,8 +1604,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/nathielbarros/Documents/Personal/Mila/ong-project/ong-project/ong-project.csproj": {
-              "projectPath": "/Users/nathielbarros/Documents/Personal/Mila/ong-project/ong-project/ong-project.csproj"
+            "/Users/nathielbarros/Documents/Personal/Mila/ong/ong-project/ong-project.csproj": {
+              "projectPath": "/Users/nathielbarros/Documents/Personal/Mila/ong/ong-project/ong-project.csproj"
             }
           }
         }

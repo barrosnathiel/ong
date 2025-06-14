@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zmil+s2jGSU=",
+  "dgSpecHash": "5sJLo3+qvEA=",
   "success": true,
-  "projectFilePath": "/Users/nathielbarros/Documents/Personal/Mila/ong-project/ong-project/ong-project.csproj",
+  "projectFilePath": "/Users/nathielbarros/Documents/Personal/Mila/ong/ong-project/ong-project.csproj",
   "expectedPackageFiles": [
     "/Users/nathielbarros/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/nathielbarros/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

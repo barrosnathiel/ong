@@ -3439,11 +3439,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nathielbarros/Documents/Personal/Mila/ong-project/ong-project/ong-project.csproj",
+      "projectUniqueName": "/Users/nathielbarros/Documents/Personal/Mila/ong/ong-project/ong-project.csproj",
       "projectName": "ong-project",
-      "projectPath": "/Users/nathielbarros/Documents/Personal/Mila/ong-project/ong-project/ong-project.csproj",
+      "projectPath": "/Users/nathielbarros/Documents/Personal/Mila/ong/ong-project/ong-project.csproj",
       "packagesPath": "/Users/nathielbarros/.nuget/packages/",
-      "outputPath": "/Users/nathielbarros/Documents/Personal/Mila/ong-project/ong-project/obj/",
+      "outputPath": "/Users/nathielbarros/Documents/Personal/Mila/ong/ong-project/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nathielbarros/.nuget/NuGet/NuGet.Config"
