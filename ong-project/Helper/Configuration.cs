@@ -7,7 +7,7 @@ public static class Configuration
 {
     public static IConfiguration GetConfiguration()
     {
-        var basePath = Directory.GetCurrentDirectory();;
+        var basePath = Directory.GetCurrentDirectory();
         var configPath = FindFileInParentDirs(basePath, Path.Combine("ong-project", "appsettings.json"));
 
         if (configPath == null)
