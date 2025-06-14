@@ -7,27 +7,29 @@ public static class Configuration
 {
     public static IConfiguration GetConfiguration()
     {
-        var basePath = Directory.GetCurrentDirectory();
-        var possiblePaths = new[]
-        {
-            Path.Combine(basePath, "appsettings.json"), // For Lambda
-            Path.Combine(basePath, "..", "ong-project", "appsettings.json"), // For local dev
-            Path.Combine(basePath, "..", "..", "ong-project", "appsettings.json") // Alternative local path
-        };
+        var basePath = Directory.GetCurrentDirectory();;
+        var configPath = FindFileInParentDirs(basePath, Path.Combine("ong-project", "appsettings.json"));
 
-        var configBuilder = new ConfigurationBuilder()
-            .AddEnvironmentVariables(); // Always include environment variables
+        if (configPath == null)
+            throw new FileNotFoundException("Não foi possível localizar o arquivo 'appsettings.json' na pasta 'ong-project'.");
 
-        // Add the first found JSON file
-        foreach (var path in possiblePaths)
+        return new ConfigurationBuilder()
+            .AddEnvironmentVariables()
+            .AddJsonFile(configPath, optional: false, reloadOnChange: true)
+            .Build();
+    }
+
+    private static string? FindFileInParentDirs(string startPath, string relativePath)
+    {
+        var dir = new DirectoryInfo(startPath);
+        while (dir != null)
         {
-            if (File.Exists(path))
-            {
-                configBuilder.AddJsonFile(path, optional: false);
-                break;
-            }
+            var candidate = Path.Combine(dir.FullName, relativePath);
+            if (File.Exists(candidate))
+                return candidate;
+
+            dir = dir.Parent;
         }
-
-        return configBuilder.Build();
+        return null;
     }
 }

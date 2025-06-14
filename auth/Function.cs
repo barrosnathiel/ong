@@ -19,11 +19,12 @@ public class Function
     public Function()
     {
         var config = Configuration.GetConfiguration();
-        
+
         _tokenGenerator = new JwtTokenGenerator(
             config["JWT_SECRET"] ?? throw new ArgumentNullException("JWT_SECRET is missing")
         );
-        DependencyInjection.Inject();
+
+        DependencyInjection.Inject(config); // << Passa a mesma config
     }
     
     public APIGatewayProxyResponse FunctionHandler(APIGatewayProxyRequest request, ILambdaContext context)
