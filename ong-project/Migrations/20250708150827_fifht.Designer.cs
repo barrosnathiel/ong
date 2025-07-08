@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ong_project.Infrastructure;
@@ -11,9 +12,11 @@ using ong_project.Infrastructure;
 namespace ong_project.Migrations
 {
     [DbContext(typeof(OngDbContext))]
-    partial class OngDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250708150827_fifht")]
+    partial class fifht
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

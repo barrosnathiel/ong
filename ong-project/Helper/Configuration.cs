@@ -7,15 +7,14 @@ public static class Configuration
 {
     public static IConfiguration GetConfiguration()
     {
-        var basePath = Directory.GetCurrentDirectory();
-        var configPath = FindFileInParentDirs(basePath, Path.Combine("ong-project", "appsettings.json"));
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json");
 
-        if (configPath == null)
-            throw new FileNotFoundException("Não foi possível localizar o arquivo 'appsettings.json' na pasta 'ong-project'.");
+        if (!File.Exists(path))
+            throw new FileNotFoundException("Arquivo 'appsettings.json' não encontrado na raiz da Lambda.");
 
         return new ConfigurationBuilder()
             .AddEnvironmentVariables()
-            .AddJsonFile(configPath, optional: false, reloadOnChange: true)
+            .AddJsonFile(path, optional: false, reloadOnChange: true)
             .Build();
     }
 

@@ -12,7 +12,7 @@
   "function-runtime": "dotnet8",
   "function-memory-size": 512,
   "function-timeout": 30,
-  "function-handler": "auth::auth.Function::FunctionHandler",
-  "function-name": "auth-lambda",
+  "function-handler": "course-list::course_list.Function::FunctionHandler",
+  "function-name": "course-list-lambda",
   "package-type": "Zip"
 }

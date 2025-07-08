@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using ong_project.Common;
+using ong_project.Domain;
 using ong_project.Domain.Repositories;
-using ong_project.Domain.User;
 
 namespace ong_project.Infrastructure.Repositories;
 
@@ -13,13 +14,24 @@ public class UserRepository : IUserRepository
         _context = context;
     }
 
-    public async Task<User?> GetByEmailAsync(string cpf)
+    public async Task<User?> GetByEmailAsync(string email)
     {
-        return await _context.Users.FirstOrDefaultAsync(u => u.Cpf == cpf);
+        return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
     }
 
-    public Task<User> CreateUserAsync(User user)
+    public async Task<User?> GetByTokenAsync(string token)
     {
-        throw new NotImplementedException();
+        return await _context.Users.Where(x => x.Token == token).FirstOrDefaultAsync();
+    }
+
+    public async Task CreateUserAsync(User user)
+    {
+        await _context.Users.AddAsync(user);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<List<User>> GetAllUsersAsync()
+    {
+        return await _context.Users.Where(x => x.UserType != Constants.ADMIN_ROLE).ToListAsync();
     }
 }

@@ -14,7 +14,7 @@ public static class PostgresDependencyService
         services.AddDbContext<OngDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
         
-        services.AddScoped<IUserRepository, UserRepository>();
+        
 
         return services;
     }

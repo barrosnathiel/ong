@@ -2,6 +2,8 @@ namespace ong_project.Domain.Repositories;
 
 public interface IUserRepository
 {
-    Task<User.User?> GetByEmailAsync(string cpf);
-    Task<User.User> CreateUserAsync(User.User user);
+    Task<User?> GetByEmailAsync(string cpf);
+    Task<User?> GetByTokenAsync(string token);
+    Task CreateUserAsync(User user);
+    Task<List<User>> GetAllUsersAsync();
 }

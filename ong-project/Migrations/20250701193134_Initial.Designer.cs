@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ong_project.Infrastructure;
@@ -11,9 +12,11 @@ using ong_project.Infrastructure;
 namespace ong_project.Migrations
 {
     [DbContext(typeof(OngDbContext))]
-    partial class OngDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250701193134_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,25 +39,10 @@ namespace ong_project.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<DateTime>("End")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean");
-
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Token")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -104,12 +92,6 @@ namespace ong_project.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("ProfileImage")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Token")
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserType")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
